@@ -5,39 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Vanilla Frontend - Directory</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 2rem; }
-        h1 { color: #333; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 1rem 0; }
-        a { color: #007acc; text-decoration: none; font-size: 1.1rem; }
-        a:hover { text-decoration: underline; }
-        .folder { font-weight: bold; color: #444; }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --border: #334155;
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 0.85rem 1.25rem;
+            font-size: 1rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .category-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin: 2.5rem 0 1.5rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .subcategory-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+            color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            background-color: var(--card-hover);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .card a {
+            display: block;
+            padding: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            height: 100%;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .card-path {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+            opacity: 0.8;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 3rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            body { padding: 1.5rem 1rem; }
+        }
     </style>
 </head>
 <body>
-    <h1>Practice Vanilla Frontend - Index Directory</h1>
-    <ul>
-        <li><span class="folder">Reusables</span>
-            <ul>
-                <!-- <li><a href="reusables/index.html">reusables/index.html</a></li> -->
-                <li><a href="reusables/button_hover_effects/index.html">Button Hover Effects/a></li>
-                <li><a href="reusables/card_hover_effects/index.html">Card Hover Effects</a></li>
-                <li><a href="reusables/image_hover_effects/index.html">Image Hover Effects</a></li>
-                <li><a href="reusables/link_hover_effects/index.html">Link Hover Effects</a></li>
-            </ul>
-        </li>
-        <li><span class="folder">Projects</span>
-            <ul>
-                <li><a href="project/catch_the_ball/index.html">Catch the Ball Game</a></li>
-                <li><a href="project/swipe_snake/index.html">Swipe Snake</a></li>
-                <li><a href="project/weather_app/index.html">Weather App</a></li>
-                <li><a href="project/financial_calculator_tool/index.html">Financial Calculator Tool</a></li>
-                <li><a href="project/real_time_world_clock/index.html">Real Time World Clock</a></li>
-                <li><a href="project/pixel_art_maker/index.html">Pixel Art Maker</a></li>
-                <li><a href="project/markdown_viewer/index.html">Markdown Viewer</a></li>
-            </ul>
-        </li>
-    </ul>
-    <p>Click any link to view the corresponding demo or effect.</p>
+
+    <header>
+        <h1>Frontend Directory</h1>
+        <p class="subtitle">A curated collection of vanilla HTML, CSS, and JavaScript components, apps, and experimental tools.</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search demos, components, or descriptions..." autocomplete="off">
+    </div>
+
+    <main id="directory-container">
+        <!-- Dynamically rendered via app.js -->
+    </main>
+
+    <footer>
+        <p>Built with pure HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
