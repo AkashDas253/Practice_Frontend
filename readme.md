@@ -20,3 +20,4 @@
 * [Audio Synthesizer](./project/audio_synthesizer/)
 * [Kanban Board](./project/kanban_board/)
 * [Pomodoro Timer](./project/pomodoro_timer/)
+* [Password Security Utility](./project/password_security_utility/)

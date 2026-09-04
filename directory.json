@@ -100,6 +100,11 @@
               "name": "Pomodoro Timer",
               "description": "Productivity timer with customizable work/break intervals.",
               "path": "project/pomodoro_timer"
+            },
+            {
+              "name": "Password Security Utility",
+              "description": "Cryptographic password & passphrase generator with entropy auditing and zero-knowledge breach checking.",
+              "path": "project/password_security_utility"
             }
           ]
         }
