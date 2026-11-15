@@ -1,0 +1,13 @@
+### Mini projectss
+* [Catch the Ball](./projects/catch_the_ball/)
+* [Swipe Snake](./projects/swipe_snake/)
+* [Weather App](./projects/weather_app/)
+* [Real Time World Clock](./projects/real_time_world_clock/)
+* [Financial Calculator Tool](./projects/financial_calculator_tool/)
+* [Pixel Art Maker](./projects/pixel_art_maker/)
+* [Markdown Viewer](./projects/markdown_viewer/)
+* [Shape Shifter](./projects/shape_shifter/)
+* [Audio Synthesizer](./projects/audio_synthesizer/)
+* [Kanban Board](./projects/kanban_board/)
+* [Pomodoro Timer](./projects/pomodoro_timer/)
+* [Password Security Utility](./projects/password_security_utility/)
